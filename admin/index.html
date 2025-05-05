@@ -5,15 +5,25 @@
   <title>CMS Login</title>
 </head>
 <body>
-  <!-- Carica il widget di Identity (per login/signup) -->
+  <!-- 1) Netlify Identity widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', user => {
+        if (!user) {
+          // Mostra il form di login/signup
+          window.netlifyIdentity.open('login');
+        }
+      });
+      // Dopo il login, ricarica l'admin per caricare il CMS
+      window.netlifyIdentity.on('login', () => {
+        document.location.href = '/admin/';
+      });
       window.netlifyIdentity.init();
     }
   </script>
 
-  <!-- Carica Netlify CMS (gestisce automaticamente il login UI) -->
-  <script src="https://unpkg.com/netlify-cms-app@^2.0.0/dist/netlify-cms.js"></script>
+  <!-- 2) Netlify CMS: usa questo loader preciso -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
