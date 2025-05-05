@@ -2,27 +2,10 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Accedi al CMS</title>
+  <title>CMS Login</title>
 </head>
 <body>
-  <h1>Accedi al CMS per gestire gli eventi</h1>
-
-  <!-- 1) Netlify Identity widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    window.netlifyIdentity.init();
-    // Se arrivi con invite_token sulla root, riscrivilo in /admin
-    if (window.location.hash.includes("invite_token")) {
-      const hash = window.location.hash;
-      window.location.replace("/admin/" + hash);
-    }
-    // Dopo il login, vai su /admin/
-    window.netlifyIdentity.on('login', () => {
-      document.location.href = '/admin/';
-    });
-  </script>
-
-  <!-- 2) Netlify CMS -->
+  <!-- Netlify CMS carica da sé il form di login/signup -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
