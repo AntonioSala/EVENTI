@@ -2,10 +2,34 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Login Admin</title>
+  <title>Eventi Tizio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Accedi al CMS per gestire gli eventi</h1>
-  <iframe src="/admin/#/"></iframe>
+  <header>
+    <h1>Benvenuto a Eventi Tizio</h1>
+    <nav>
+      <a href="/">Home</a> |
+      <a href="/admin">Admin</a> |
+      <a href="/events/sample-event.html">Eventi</a> |
+      <a href="/pages/chi-siamo.html">Chi Siamo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="events-list">
+      <h2>Eventi in programma</h2>
+      <!-- Qui in futuro Eleventy o un loop JS renderizzerà gli eventi -->
+      <div class="event">
+        <h3>Evento di esempio</h3>
+        <p>Descrizione evento di esempio</p>
+        <p><strong>Data:</strong> 01/06/2025</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eventi Tizio</p>
+  </footer>
 </body>
 </html>
