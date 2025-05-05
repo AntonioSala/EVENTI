@@ -1,29 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>CMS Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Eventi</title>
 </head>
 <body>
-  <!-- 1) Netlify Identity widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          // Mostra il form di login/signup
-          window.netlifyIdentity.open('login');
-        }
-      });
-      // Dopo il login, ricarica l'admin per caricare il CMS
-      window.netlifyIdentity.on('login', () => {
-        document.location.href = '/admin/';
-      });
-      window.netlifyIdentity.init();
-    }
-  </script>
-
-  <!-- 2) Netlify CMS: usa questo loader preciso -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
 </body>
 </html>
