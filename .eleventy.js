@@ -1,7 +1,12 @@
 module.exports = function(eleventyConfig) {
-  // Aggiungi la copia della cartella images e admin
+  // Copia lo stylesheet in root
+  eleventyConfig.addPassthroughCopy("styles.css");
+  // Copia la cartella immagini
   eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("admin");  // Aggiunto per la cartella admin
+  // Copia la cartella admin per Netlify CMS
+  eleventyConfig.addPassthroughCopy("admin");
+  // Copia la cartella pages (chi-siamo.md/.html)
+  eleventyConfig.addPassthroughCopy({ "pages": "pages" });
 
   return {
     dir: {
