@@ -3,10 +3,23 @@ layout: layout
 title: Eventi
 ---
 
-<h2>Eventi disponibili</h2>
+<section class="events-grid container">
+  <h2>Eventi disponibili</h2>
 
-<div class="event">
-  <h3><a href="/events/sample-event/">Evento di esempio</a></h3>
-  <p>Descrizione evento di esempio</p>
-  <p><strong>Data:</strong> 01/06/2025</p>
-</div>
+  {% for ev in collections.eventi %}
+    <article class="card-event">
+      <a href="{{ ev.url }}">
+        {% if ev.data.image %}
+          <div class="card-event__thumb" style="background-image: url('{{ ev.data.image | url }}');"></div>
+        {% endif %}
+        <div class="card-event__body">
+          <h3>{{ ev.data.title }}</h3>
+          <time datetime="{{ ev.data.date }}">
+            {{ ev.data.date | date }}
+          </time>
+          <p>{{ ev.data.body | striptags | truncate(100) }}</p>
+        </div>
+      </a>
+    </article>
+  {% endfor %}
+</section>

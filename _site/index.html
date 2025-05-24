@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eventi</title>
+  <title>Starlike</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo"><a href="/">Eventi</a></h1>
+    <div class="container header-inner">
+      <h1 class="logo"><a href="/">Starlike</a></h1>
+      <!-- Pulsante hamburger -->
+      <button class="nav-toggle" aria-label="Apri menu">
+        <span class="hamburger"></span>
+      </button>
       <nav class="main-nav">
         <a href="/">Home</a>
         <a href="/events/">Eventi</a>
@@ -20,17 +24,37 @@
   </header>
 
   <main class="container">
-    
-<section class="events-grid">
-  
-</section>
-
+    <section class="hero">
+      <div class="hero__overlay">
+        <div class="container hero__content">
+          <h2>Scopri gli eventi più interessanti</h2>
+          <p>Partecipa agli appuntamenti di Starlike, dove cultura e divertimento si incontrano.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 Eventi Tizio</p>
+      <p>&copy; 2025 Starlike</p>
     </div>
   </footer>
+
+  <!-- Icone flottanti -->
+  <a href="https://wa.me/393881154363" target="_blank" rel="noopener" class="floating-icon whatsapp">
+    <img src="/images/uploads/whatsapp.svg" alt="WhatsApp" />
+  </a>
+  <a href="https://www.instagram.com/danielestarlike" target="_blank" rel="noopener" class="floating-icon instagram">
+    <img src="/images/uploads/instagram.svg" alt="Instagram" />
+  </a>
+
+  <!-- Script per togglare il menu -->
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>

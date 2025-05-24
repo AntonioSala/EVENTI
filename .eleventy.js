@@ -1,12 +1,31 @@
+const { DateTime } = require("luxon");
+
 module.exports = function(eleventyConfig) {
-  // Copia lo stylesheet in root
+  // Copia file statici
   eleventyConfig.addPassthroughCopy("styles.css");
-  // Copia la cartella immagini
   eleventyConfig.addPassthroughCopy("images");
-  // Copia la cartella admin per Netlify CMS
   eleventyConfig.addPassthroughCopy("admin");
-  // Copia la cartella pages (chi-siamo.md/.html)
   eleventyConfig.addPassthroughCopy({ "pages": "pages" });
+
+  // Filtro robusto per date con localizzazione in italiano
+  eleventyConfig.addFilter("date", (dateObj, format = "d LLLL yyyy") => {
+    try {
+      if (typeof dateObj === "string") {
+        return DateTime.fromISO(dateObj).setLocale("it").toFormat(format);
+      } else if (dateObj instanceof Date) {
+        return DateTime.fromJSDate(dateObj).setLocale("it").toFormat(format);
+      } else {
+        return "Data non valida";
+      }
+    } catch (err) {
+      return "Data non valida";
+    }
+  });
+
+  // Collezione dinamica eventi
+  eleventyConfig.addCollection("eventi", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/events/*.md");
+  });
 
   return {
     dir: {

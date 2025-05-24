@@ -8,8 +8,12 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
       <h1 class="logo"><a href="/">{{ title }}</a></h1>
+      <!-- Pulsante hamburger -->
+      <button class="nav-toggle" aria-label="Apri menu">
+        <span class="hamburger"></span>
+      </button>
       <nav class="main-nav">
         <a href="/">Home</a>
         <a href="/events/">Eventi</a>
@@ -25,8 +29,25 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 Eventi Tizio</p>
+      <p>&copy; 2025 {{ title }}</p>
     </div>
   </footer>
+
+  <!-- Icone flottanti (WhatsApp & Instagram) -->
+  <a href="https://wa.me/393881154363" target="_blank" rel="noopener" class="floating-icon whatsapp">
+    <img src="/images/uploads/whatsapp.svg" alt="WhatsApp" />
+  </a>
+  <a href="https://www.instagram.com/danielestarlike" target="_blank" rel="noopener" class="floating-icon instagram">
+    <img src="/images/uploads/instagram.svg" alt="Instagram" />
+  </a>
+
+  <!-- Script per aprire/chiudere il menu mobile -->
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
