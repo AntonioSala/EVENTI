@@ -1,7 +1,7 @@
 ---
-eleventyExcludeFromCollections: true   # Esclude questo template dai “collections” e dalle pagine di Eleventy
+eleventyExcludeFromCollections: true  # Esclude questo template dalla collezione e da permalink automatici
+permalink: false                     # Non generare output diretto per il template stesso
 layout: layout
-permalink: false                       # Dice a Eleventy: “Non generare un file di output per questo file in autonomia”
 ---
 <article class="event-detail container">
   {% if image %}
