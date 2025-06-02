@@ -20,7 +20,8 @@
   "homepage": "https://github.com/AntonioSala/EVENTI#readme",
   "description": "",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1"
   },
   "dependencies": {
     "luxon": "^3.6.1"

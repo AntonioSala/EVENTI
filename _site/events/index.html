@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventi</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="/">Eventi</a></h1>
+      <!-- Pulsante hamburger -->
+      <button class="nav-toggle" aria-label="Apri menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/events/">Eventi</a>
+        <a href="/pages/chi-siamo.html">Chi Siamo</a>
+        <a href="/admin/">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<section class="events-grid container">
+  <h2>Eventi disponibili</h2>
+
+  
+    <article class="card-event">
+      <a href="/events/vvvv/">
+        
+          <div class="card-event__thumb" style="background-image: url('/images/uploads/diagramma_er_antonio_salanitro.png');"></div>
+        
+        <div class="card-event__body">
+          <h3>vvvv</h3>
+          <time datetime="Tue May 06 2025 12:28:08 GMT+0200 (Ora legale dell’Europa centrale)">
+            6 maggio 2025
+          </time>
+          <p></p>
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-event">
+      <a href="/events/ccccc/">
+        
+          <div class="card-event__thumb" style="background-image: url('/images/uploads/screenshot-2023-04-08-110408.png');"></div>
+        
+        <div class="card-event__body">
+          <h3>ccccc</h3>
+          <time datetime="Tue May 06 2025 12:50:27 GMT+0200 (Ora legale dell’Europa centrale)">
+            6 maggio 2025
+          </time>
+          <p></p>
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-event">
+      <a href="/events/sample-event/">
+        
+          <div class="card-event__thumb" style="background-image: url('/images/uploads/screenshot-2023-04-08-110408.png');"></div>
+        
+        <div class="card-event__body">
+          <h3>Sample Event</h3>
+          <time datetime="Fri May 30 2025 00:00:00 GMT+0200 (Ora legale dell’Europa centrale)">
+            30 maggio 2025
+          </time>
+          <p></p>
+        </div>
+      </a>
+    </article>
+  
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Eventi</p>
+    </div>
+  </footer>
+
+  <!-- Icone flottanti (WhatsApp & Instagram) -->
+  <a href="https://wa.me/393881154363" target="_blank" rel="noopener" class="floating-icon whatsapp">
+    <img src="/images/uploads/whatsapp.svg" alt="WhatsApp" />
+  </a>
+  <a href="https://www.instagram.com/danielestarlike" target="_blank" rel="noopener" class="floating-icon instagram">
+    <img src="/images/uploads/instagram.svg" alt="Instagram" />
+  </a>
+
+  <!-- Script per aprire/chiudere il menu mobile -->
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

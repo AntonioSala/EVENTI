@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "eventi"
+    label: "Eventi"
+    folder: "src/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Titolo"
+        name: "title"
+        widget: "string"
+      - label: "Data"
+        name: "date"
+        widget: "date"
+        date_format: "YYYY-MM-DD"
+        value_type: "date"
+      - label: "Descrizione"
+        name: "body"
+        widget: "markdown"
+      - label: "Locandina"
+        name: "image"
+        widget: "image"
+
+  - name: "pagine"
+    label: "Pagine"
+    files:
+      - label: "Chi siamo"
+        name: "chi-siamo"
+        file: "pages/chi-siamo.md"
+        fields:
+          - { label: "Titolo", name: "title", widget: "string" }
+          - { label: "Contenuto", name: "body", widget: "markdown" }
