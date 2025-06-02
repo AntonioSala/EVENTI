@@ -26,6 +26,10 @@ collections:
       - label: "Locandina"
         name: "image"
         widget: "image"
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "layout"
 
   - name: "pagine"
     label: "Pagine"
