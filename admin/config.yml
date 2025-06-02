@@ -29,7 +29,11 @@ collections:
       - label: "Layout"
         name: "layout"
         widget: "hidden"
-        default: "layout"
+        default: "event.njk"
+      - label: "Permalink"
+        name: "permalink"
+        widget: "hidden"
+        default: "/events/{{slug}}/"
 
   - name: "pagine"
     label: "Pagine"
