@@ -1,0 +1,19 @@
+---
+# Questo front matter serve solo a indicare il permalink generico:
+permalink: "/events/{{ slug }}/"
+layout: layout
+---
+<article class="event-detail container">
+  {% if image %}
+    <div class="event-detail__thumb">
+      <img src="{{ image | url }}" alt="{{ title }}" />
+    </div>
+  {% endif %}
+  <h1 class="event-detail__title">{{ title }}</h1>
+  <time class="event-detail__date" datetime="{{ date }}">
+    {{ date | date }}
+  </time>
+  <div class="event-detail__body">
+    {{ content | safe }}
+  </div>
+</article>
