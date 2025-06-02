@@ -1,7 +1,7 @@
 ---
-# Questo front matter serve solo a indicare il permalink generico:
-permalink: "/events/{{ slug }}/"
+eleventyExcludeFromCollections: true   # Esclude questo template dai “collections” e dalle pagine di Eleventy
 layout: layout
+permalink: false                       # Dice a Eleventy: “Non generare un file di output per questo file in autonomia”
 ---
 <article class="event-detail container">
   {% if image %}
