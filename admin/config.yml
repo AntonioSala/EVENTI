@@ -30,10 +30,6 @@ collections:
         name: "layout"
         widget: "hidden"
         default: "event.njk"
-      - label: "Permalink"
-        name: "permalink"
-        widget: "hidden"
-        default: "/events/{{slug}}/"
 
   - name: "pagine"
     label: "Pagine"
