@@ -10,7 +10,7 @@ collections:
     label: "Eventi"
     folder: "src/events"
     create: true
-    slug: "{{slug}}"
+    slug: "{{title | slug}}"
     fields:
       - label: "Titolo"
         name: "title"
@@ -26,6 +26,10 @@ collections:
       - label: "Locandina"
         name: "image"
         widget: "image"
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "event.njk"
 
   - name: "pagine"
     label: "Pagine"

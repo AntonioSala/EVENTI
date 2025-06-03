@@ -5,6 +5,6 @@ title: ciao
 
 b﻿oh
 
-![](/images/uploads/screenshot-2023-04-08-110408.png)
+![](/images/uploads/1500px-sintesi-proteica.jpg)
 
 b﻿oh
