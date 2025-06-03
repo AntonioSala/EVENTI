@@ -1,6 +1,0 @@
-{
-  "layout": "event.njk",
-  "eleventyComputed": {
-    "permalink": "/events/{{ slug }}/"
-  }
-}
