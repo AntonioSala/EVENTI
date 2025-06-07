@@ -11,10 +11,8 @@ permalink: "/events/"
     <article class="card-event">
       <a href="{{ ev.url }}">
         {% if ev.data.image %}
-          <div
-            class="card-event__thumb"
-            style="background-image: url('{{ ev.data.image | url }}');"
-          ></div>
+          <div class="card-event__thumb"
+               style="background-image: url('{{ ev.data.image | url }}');"></div>
         {% endif %}
         <div class="card-event__body">
           <h3>{{ ev.data.title }}</h3>

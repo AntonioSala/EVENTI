@@ -1,6 +1,6 @@
 {
   "layout": "event.njk",
   "eleventyComputed": {
-    "permalink": "/events/{{ slug }}/"
+    "permalink": "/events/{{ page.fileSlug }}/"
   }
 }
