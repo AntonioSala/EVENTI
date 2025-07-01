@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
       <h1 class="logo"><a href="/">Starlike</a></h1>
-      <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Apri menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
         <a href="/">Home</a>
         <a href="/events/">Eventi</a>
         <a href="/pages/chi-siamo.html">Chi Siamo</a>
@@ -37,5 +41,25 @@
       <p>&copy; 2025 Starlike</p>
     </div>
   </footer>
+
+  <!-- Icone social flottanti -->
+  <a href="https://wa.me/393881154363" class="floating-icon whatsapp" target="_blank" aria-label="WhatsApp">
+    <img src="/images/uploads/whatsapp.svg" alt="WhatsApp">
+  </a>
+  <a href="https://www.instagram.com/danielestarlike" class="floating-icon instagram" target="_blank" aria-label="Instagram">
+    <img src="/images/uploads/instagram.svg" alt="Instagram">
+  </a>
+
+  <!-- Toggle del menu responsive -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("mainNav");
+
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("nav-open");
+      });
+    });
+  </script>
 </body>
 </html>

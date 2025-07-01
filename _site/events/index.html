@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
       <h1 class="logo"><a href="/">Eventi</a></h1>
-      <!-- Pulsante hamburger -->
       <button class="nav-toggle" aria-label="Apri menu">
         <span class="hamburger"></span>
       </button>
-      <nav class="main-nav">
+      <nav class="main-nav" id="mainNav">
         <a href="/">Home</a>
         <a href="/events/">Eventi</a>
         <a href="/pages/chi-siamo.html">Chi Siamo</a>
@@ -29,30 +29,96 @@
   <h2>Eventi disponibili</h2>
 
   
+    <article class="card-event">
+      <a href="/events/ff/">
+        
+          <div class="card-event__thumb"
+               style="background-image: url('/images/uploads/1500px-sintesi-proteica.jpg');"></div>
+        
+        <div class="card-event__body">
+          <h3>ff</h3>
+          <time datetime="Tue Jun 03 2025 19:12:45 GMT+0200 (Ora legale dell’Europa centrale)">
+            3 giugno 2025
+          </time>
+          <p>fffddddd</p>
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-event">
+      <a href="/events/prova/">
+        
+          <div class="card-event__thumb"
+               style="background-image: url('/images/uploads/1500px-sintesi-proteica.jpg');"></div>
+        
+        <div class="card-event__body">
+          <h3>prova</h3>
+          <time datetime="Sat Jun 07 2025 17:58:35 GMT+0200 (Ora legale dell’Europa centrale)">
+            7 giugno 2025
+          </time>
+          <p>p rova</p>
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-event">
+      <a href="/events/ci-sono-riuscito/">
+        
+          <div class="card-event__thumb"
+               style="background-image: url('/images/uploads/diagramma_er_antonio_salanitro.png');"></div>
+        
+        <div class="card-event__body">
+          <h3>ci sono riuscito</h3>
+          <time datetime="Sat Jun 07 2025 18:18:36 GMT+0200 (Ora legale dell’Europa centrale)">
+            7 giugno 2025
+          </time>
+          <p>f inalmente</p>
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-event">
+      <a href="/events/evento-daniele/">
+        
+          <div class="card-event__thumb"
+               style="background-image: url('/images/uploads/3fd238b0-fe25-4fb0-9f01-c870c33229dd.jpeg');"></div>
+        
+        <div class="card-event__body">
+          <h3>Evento Daniele</h3>
+          <time datetime="Wed Jun 18 2025 21:49:56 GMT+0200 (Ora legale dell’Europa centrale)">
+            18 giugno 2025
+          </time>
+          <p>Descrizione evento</p>
+        </div>
+      </a>
+    </article>
+  
 </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 Eventi</p>
+      <p>&copy; 2025 Starlike</p>
     </div>
   </footer>
 
-  <!-- Icone flottanti (WhatsApp & Instagram) -->
-  <a href="https://wa.me/393881154363" target="_blank" rel="noopener" class="floating-icon whatsapp">
-    <img src="/images/uploads/whatsapp.svg" alt="WhatsApp" />
+  <!-- Icone social flottanti -->
+  <a href="https://wa.me/393881154363" class="floating-icon whatsapp" target="_blank" aria-label="WhatsApp">
+    <img src="/images/uploads/whatsapp.svg" alt="WhatsApp">
   </a>
-  <a href="https://www.instagram.com/danielestarlike" target="_blank" rel="noopener" class="floating-icon instagram">
-    <img src="/images/uploads/instagram.svg" alt="Instagram" />
+  <a href="https://www.instagram.com/danielestarlike" class="floating-icon instagram" target="_blank" aria-label="Instagram">
+    <img src="/images/uploads/instagram.svg" alt="Instagram">
   </a>
 
-  <!-- Script per aprire/chiudere il menu mobile -->
+  <!-- Toggle del menu responsive -->
   <script>
-    const btn = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.main-nav');
-    btn.addEventListener('click', () => {
-      nav.classList.toggle('nav-open');
+    document.addEventListener("DOMContentLoaded", function() {
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.getElementById("mainNav");
+
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("nav-open");
+      });
     });
   </script>
 </body>
